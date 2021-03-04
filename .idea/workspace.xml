@@ -20,17 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33e4736-c404-439e-8e92-3d3faf38e0cc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/react-dnd-scrollzone/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/react-dnd-scrollzone/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/react-frame-component/Content.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/react-frame-component/Context.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/react-frame-component/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/react-frame-component/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/VirtualNodeRender.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugins/frame-content-borad/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/frame-content-borad/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plugins/main-panel-render/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/main-panel-render/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugins/system-conponent-board/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugins/system-conponent-board/index.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,22 +40,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/plugins/frame-content-borad/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+            <state relative-caret-position="415">
+              <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -68,11 +51,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VirtualNodeRender.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/VirtualNodeRender.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-856">
+              <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/plugins/main-panel-render/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="182">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -80,16 +81,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/react-dnd-scrollzone/util.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/react-frame-component/index.js">
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/plugins/system-conponent-board/index.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" selection-start-column="22" selection-end-column="22" />
+            <state relative-caret-position="280">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,11 +96,20 @@
       <file leaf-file-name="Frame.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1032">
-              <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+            <state relative-caret-position="-203">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.config.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/model/global-config/global.config.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -114,7 +122,7 @@
       <file leaf-file-name="Frame.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/Frame.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="886">
               <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
             </state>
           </provider>
@@ -127,11 +135,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/index.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -140,8 +143,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx" />
         <option value="$PROJECT_DIR$/src/plugins/frame-content-borad/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx" />
+        <option value="$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/index.js" />
+        <option value="$PROJECT_DIR$/src/plugins/system-conponent-board/index.tsx" />
         <option value="$PROJECT_DIR$/src/plugins/main-panel-render/index.tsx" />
       </list>
     </option>
@@ -233,7 +238,34 @@
               <item name="cunstom-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="main-editor-artboard-modal-render" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cunstom-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cunstom-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
               <item name="main-panel-render" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cunstom-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cunstom-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="system-conponent-board" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cunstom-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cunstom-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cunstom-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cunstom-react" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,11 +307,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/plugins" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="D:\westorm\webstormProject\meiluo-custom-react-app\src\assets\img" />
       <recent name="D:\westorm\webstormProject\meiluo-custom-react-app\src\frameComponent\button" />
       <recent name="D:\westorm\webstormProject\meiluo-custom-react-app\src\utils" />
-      <recent name="D:\westorm\webstormProject\meiluo-custom-react-app\src\custom-hook\window-resize" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\westorm\webstormProject\meiluo-custom-react-app\src\plugins" />
@@ -327,12 +359,12 @@
       <workItem from="1614679024232" duration="33179000" />
       <workItem from="1614837131454" duration="4174000" />
       <workItem from="1614857092130" duration="817000" />
-      <workItem from="1614857932686" duration="5303000" />
+      <workItem from="1614857932686" duration="7709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6120000" />
+    <option name="totallyTimeSpent" value="8526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="811" extended-state="6" />
@@ -439,21 +471,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/Content.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-311" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/Frame.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/react-frame-component/Context.jsx">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/react-frame-component/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -461,23 +478,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/react-dnd-scrollzone/util.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/react-frame-component/Context.jsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/Frame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="886">
+          <caret line="152" column="11" lean-forward="true" selection-start-line="152" selection-start-column="11" selection-end-line="152" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-frame-component/lib/Content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-311" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/react-frame-component/Frame.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+        <state relative-caret-position="-203">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/react-dnd-scrollzone/util.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/store/model/global-config/global.config.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/VirtualNodeRender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-856">
+          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/main-editor-artboard-modal-render/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugins/system-conponent-board/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugins/frame-content-borad/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+        <state relative-caret-position="415">
+          <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -486,8 +549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/plugins/main-panel-render/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        <state relative-caret-position="182">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>

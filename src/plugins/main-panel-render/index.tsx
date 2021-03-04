@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useState} from "react";
 import {useDragDropManager, useDrop, DropTarget} from 'react-dnd'
 import DragType from "@src/BasisClass/dragType";
 import withScrolling, {
@@ -7,6 +7,7 @@ import withScrolling, {
 
 const ScrollingComponent = withScrolling("div");
 const linearVerticalStrength = createVerticalStrength(60);
+import component from '@src/frameComponent'
 
 const accept = () => {
     return [DragType.SystemComponent]
@@ -28,13 +29,14 @@ function vStrength(box, point) {
 
 const DropSourceTarget: FC = (props: any) => {
     const dragDropManager = useDragDropManager()
-    console.log(props)
+    console.log(props);
+    const [ids,setids] = useState([]);
     const [{canDrop, isOver}, drop] = useDrop(() => ({
         accept: accept(),
-        // hover:(item) => {
-        //     console.log(item)
-        // },
-        drop: () => ({name: 'Dustbin'}),
+        hover:(item) => {
+            console.log('hover')
+        },
+        drop: (item:any) => (setids([...ids,item.id])),
         collect: (monitor) => ({
             isOver: monitor.isOver(),
             canDrop: monitor.canDrop(),
@@ -56,6 +58,7 @@ const DropSourceTarget: FC = (props: any) => {
         >
             <div ref={drop}>
                 {isActive ? 'Release to drop' : 'Drag a box here'}
+
             </div>
         </ScrollingComponent>
     )

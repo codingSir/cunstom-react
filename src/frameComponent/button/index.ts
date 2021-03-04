@@ -3,11 +3,11 @@ import ButtonView from './view'
 import img from './button.png'
 
 export default class Button {
-    name:'button';
+    name = 'button';
 
-    id:'123'
+    id = '123';
 
-    style:{
+    style = {
     };
 
     icon: string = img;

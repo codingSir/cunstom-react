@@ -84,6 +84,7 @@ export default class Frame extends Component {
 
         const win = doc.defaultView || doc.parentView;
         const initialRender = !this._setInitialContent;
+
         const contents = (
             <Content
                 contentDidMount={contentDidMount}
