@@ -1,18 +1,17 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {Layout, Button ,Tabs} from 'antd'
-import api from '@src/services/api'
+// import api from '@src/services/api'
 import {Input} from '@src/components'
 
 import BlankLayout from "@src/layouts/BlankLayout/BlankLayout"
-import {Icon} from '@src/components'
-import logo from '@assets/img/logo.png'
+// import { Icon } from '@src/components'
 import styles from './login.module.scss'
 import {RouterProps} from "react-router";
 import { tokenMange } from '@src/services/token-manage'
-import {useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import {RootDispatch} from "@src/store";
 
-const {Header, Content} = Layout;
+const { Content } = Layout;
 const { TabPane } = Tabs;
 
 type Props = RouterProps;
@@ -82,43 +81,41 @@ export default function Login(props: Props) {
 
         let res:Promise<any> ;
 
-        if(type === 'login'){
-             res = api.user.login({username:account,password})
-        }else {
-             res = api.user.register({username:account,password})
-        }
-        res.then((data:any) => {
-            console.log(data)
-            tokenMange.setToken({token:data.token,hasToken:true,username:account,password});
+        // if(type === 'login'){
+        //      res = api.user.login({username:account,password})
+        // }else {
+        //      res = api.user.register({username:account,password})
+        // }
+        // res.then((data:any) => {
+        //     console.log(data)
+        //     tokenMange.setToken({token:data.token,hasToken:true,username:account,password});
+        //     dispatch.global.setTokenStatus(true);
+        //     setLoading(false)
+        // }).catch(() => {
+        //
+        //     setLoading(false)
+        // })
+        setTimeout(() => {
+            tokenMange.setToken({token:'123',hasToken:true,username:account,password});
             dispatch.global.setTokenStatus(true);
             setLoading(false)
-        }).catch(() => {
-
-            setLoading(false)
-        })
+            props.history.push('/application/create')
+        },1000)
 
     }
     return (
         <BlankLayout>
-            <Header className={styles.header}>
-                <img src={logo} className={styles.logo} onClick={() => props.history.push('/home')}/>
-
-                <div className={`${styles.login_button}`}>
-                    <div className={styles.navItem}>忘记密码</div>
-                </div>
-            </Header>
-            <Content>
+            <Content style={{display:'flex'}}>
+                <div style={{flex:1}}>bg</div>
                 <div className={styles.content}>
-                    <p>登陆</p>
-                    <div className={styles.icon_content}>
-                        <Icon name={'icon-_weixindenglu weixinIcon'}/>
-                    </div>
-                    <div style={{width:'256px'}}>
+                    <span className={styles.header_text}>中科美络前端工具化平台</span>
+                    <div style={{width:'256px',marginTop: '38%'}}>
                         <Tabs defaultActiveKey="1" >
                             <TabPane tab="密码登陆" key="1">
                                 <div>
                                     <Input type={'text'}
                                            name={'account'}
+                                           placeholder={'请输入账号'}
                                            ref={accountRef}
                                            rule={{regExp: '^1[345789]\\d{9}$', message: '请输入正确的手机号'}}
                                            change={(event) => getData(event,'account')}/>
@@ -126,6 +123,7 @@ export default function Login(props: Props) {
                                 <div  style={{marginBottom:'15px'}}>
                                     <Input type={'password'}
                                            name={'password'}
+                                           placeholder={'请输入密码'}
                                            ref={passwordRef}
                                            change={(event) => getData(event,'password')}/>
                                 </div>
@@ -134,6 +132,7 @@ export default function Login(props: Props) {
                                 <div>
                                     <Input type={'text'}
                                            name={'account'}
+                                           placeholder={'请输入账号'}
                                            ref={accountRef}
                                            rule={{regExp: '^1[345789]\\d{9}$', message: '请输入正确的手机号'}}
                                            change={(event) => getData(event,'account')}/>
@@ -141,6 +140,7 @@ export default function Login(props: Props) {
                                 <div  style={{marginBottom:'15px'}}>
                                     <Input type={'password'}
                                            name={'password'}
+                                           placeholder={'请输入验证码'}
                                            ref={passwordRef}
                                            change={(event) => getData(event,'password')}/>
                                     <Button size={'small'} type='link'>获取验证码</Button>
@@ -164,7 +164,6 @@ export default function Login(props: Props) {
                         注册
                     </Button>
                 </div>
-
             </Content>
         </BlankLayout>
     )

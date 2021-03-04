@@ -6,7 +6,6 @@ export function useLoginReduce() {
     const [status,setStatus] = useState(false);
 
     function dispatch(status) {
-        console.log(status);
         setStatus(status)
     }
 

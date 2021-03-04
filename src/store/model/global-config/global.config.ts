@@ -5,7 +5,8 @@ interface GlobalConfigDeclare {
     hasToken:boolean,
     device:{
         name:string,
-        type:string
+        type:string,
+        media:string
     }
 }
 
@@ -14,7 +15,8 @@ const state:GlobalConfigDeclare = {
     hasToken:false,
     device:{
         name:'',
-        type:''
+        type:'',
+        media:''
     }
 };
 
@@ -30,7 +32,7 @@ const globalConfig = {
         },
         setDevice(state:GlobalConfigDeclare,payload):GlobalConfigDeclare{
 
-            state.device = payload;
+            state.device = {...state.device,...payload};
             return state
         },
         setTokenStatus(state:GlobalConfigDeclare,payload):GlobalConfigDeclare{

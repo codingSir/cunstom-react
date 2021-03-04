@@ -1,0 +1,35 @@
+.card_wrap{
+  background: none;
+}
+.card_item_1:hover{
+  .create_wrap{
+    display: none;
+  }
+  .create_select_wrap{
+    display: flex;
+  }
+}
+.create_wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  span{
+    font-size: 50px;
+  }
+  p{
+    margin-top: 15px;
+  }
+}
+.create_select_wrap{
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  .divider{
+    height: 100px;
+  }
+}

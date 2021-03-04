@@ -48,6 +48,7 @@ function Input(props:Props,ref) {
                        ref={inputRef}
                        type={props.type}
                        name={props.name}
+                       placeholder={props.placeholder}
                 />
                 <div className={styles.input_line}/>
                 <div className={styles.input_force_line} />

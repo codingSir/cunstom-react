@@ -1,7 +1,7 @@
 import React from 'react'
 
 import App from '@src/entry/App';
-import NotMatch from '@src/views/404'
+import BaseLayout from '@src/layouts/BaseLayout/BaseLayout'
 
 export interface RouteConfigDeclaration {
 
@@ -51,23 +51,42 @@ export const routerConfig: RouteConfigDeclaration[] = [
         component:App,
         routes:[
             {
+                path:'/login',
+                name:'login',
+                isRedirect:true,
+                exact:false,
+                isDynamic:true,
+                component:React.lazy(()=> import('@src/views/Login'))
+            },
+            {
                 path:'/home',
                 name:'home',
-                isRedirect:true,
+                exact:false,
                 isDynamic:true,
                 component:React.lazy(()=> import('@src/views/Home')),
             },
             {
-                path:'/login',
-                name:'login',
-                isDynamic:true,
-                component:React.lazy(()=> import('@src/views/Login'))
+                path:'/application',
+                name:'application',
+                exact:false,
+                component: BaseLayout,
+                routes:[
+                    {
+                        path:'/application/create',
+                        name:'applicationCreate',
+                        isDynamic:true,
+                        exact:true,
+                        component:React.lazy(()=> import('@src/views/ApplicationCreate'))
+                    }
+                ]
             },
-            // {
-            //     path:'*',
-            //     name:"notMatch",
-            //     component:NotMatch
-            // }
+            {
+                path:'/pcEditor',
+                name:'pcEditor',
+                isDynamic:true,
+                exact:false,
+                component:React.lazy(() => import('@src/views/PcEditor'))
+            }
         ]
-    },
+    }
 ];

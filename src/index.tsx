@@ -17,13 +17,15 @@ import {routerConfig} from '@src/router/router.config'
 
 
 ReactDOM.render(
-    <ConfigProvider locale={zh_CN}>
-        <Provider store={store}>
-            <ConnectedRouter history={history}>
-                <Switch>{renderRouter(routerConfig)}</Switch>
-            </ConnectedRouter>
-        </Provider>
-    </ConfigProvider>,
+        <ConfigProvider locale={zh_CN}>
+            <Provider store={store}>
+                <ConnectedRouter history={history}>
+                    <Switch>
+                        {renderRouter(routerConfig)}
+                    </Switch>
+                </ConnectedRouter>
+            </Provider>
+        </ConfigProvider>,
     document.getElementById('root')
 );
 

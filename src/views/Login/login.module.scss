@@ -28,16 +28,17 @@
 }
 
 .content{
+  width: 500px;
   height: 100%;
   background-color: #fafafa;
   display: flex;
   align-items: center;
   flex-direction: column;
-  p{
-    margin: 60px;
+  .header_text{
+    margin-bottom: 60px;
     font-weight: 100;
-    font-size: 72px;
-    color: #1F303B;
+    font-size: 25px;
+    color: #089efe;
     text-align: center;
   }
 
