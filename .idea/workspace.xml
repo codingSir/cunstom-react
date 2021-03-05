@@ -20,42 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33e4736-c404-439e-8e92-3d3faf38e0cc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BasisClass/dragType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FrameContext/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frameComponent/button/button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frameComponent/button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frameComponent/button/view.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frameComponent/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/BaseLayout/BaseLayout.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/BaseLayout/BaseLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugins/frame-content-borad/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugins/main-panel-render/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugins/system-conponent-board/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/plugins/system-conponent-board/system-component.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/resize.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/ApplicationCreate/application.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/ApplicationCreate/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/PcEditor/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/PcEditor/panel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/PcEditor/pcEditor.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cunstom-page-review.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meiluo-custom-react-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/_var.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/style/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-hook/login-tips-hook/login.tips.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-hook/login-tips-hook/login.tips.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entry/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/entry/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/router.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/router.config.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/model/global-config/global.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/model/global-config/global.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login/login.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login/login.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +116,7 @@
       <workItem from="1614579456146" duration="8005000" />
       <workItem from="1614674124018" duration="4105000" />
       <workItem from="1614679024232" duration="33179000" />
-      <workItem from="1614837131454" duration="4174000" />
+      <workItem from="1614837131454" duration="5059000" />
     </task>
     <servers />
   </component>
