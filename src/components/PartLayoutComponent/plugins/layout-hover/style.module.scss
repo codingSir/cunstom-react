@@ -1,0 +1,47 @@
+.border-line {
+    position: absolute;
+}
+
+.top-border {
+    @extend .border-line;
+    top: 0;
+    left:0;
+    height: 1px;
+    width: 100%;
+    margin-right: 1px;
+    border-top: 1px dashed #6cbaff;
+    z-index:80;
+}
+
+.right-border {
+    @extend .border-line;
+    right: 0;
+    top:0;
+    height: 100%;
+    width: 1px;
+    margin-bottom: 1px;
+    border-right: 1px dashed #6cbaff;
+    z-index:80;
+}
+
+.bottom-border {
+    @extend .border-line;
+    bottom: 0;
+    left:0;
+    height: 1px;
+    width: 100%;
+    margin-left: 1px;
+    border-bottom: 1px dashed #6cbaff;
+    z-index:80;
+}
+
+.left-border {
+    @extend .border-line;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 1px;
+    margin-top: 1px;
+    border-left: 1px dashed #6cbaff;
+    z-index:80;
+}

@@ -12,16 +12,16 @@ const toolType = () => {
 }
 
 export interface DragProps {
-    id:string
-    name?: string
-    type?: string
+    layoutType?: string
+    type?: string,
+    nodeId
     isDropped?: boolean
 };
 
-const DragSourceTarget: FC<DragProps> = React.memo(({id, name, type, isDropped, children}) => {
+const DragSourceTarget: FC<DragProps> = React.memo(({layoutType, type, nodeId, isDropped, children}) => {
     const [{opacity}, drag] = useDrag(
         () => ({
-            item: {id,name, type},
+            item: {layoutType, type},
             collect: (monitor) => ({
                 opacity: monitor.isDragging() ? 0.4 : 1,
             }),
@@ -43,7 +43,7 @@ export default function SystemComponentBoard() {
                 components.map((item, index) =>
                     <Row key={index} gutter={[16, 16]} className={styles.board_row}>
                         <Col span={8}>
-                            <DragSourceTarget id={item.id} name={item.name} type={toolType()}>
+                            <DragSourceTarget layoutType={item.layoutType} type={toolType()} nodeId={item.id}>
                                 <img src={item.icon}/>
                             </DragSourceTarget>
                         </Col>

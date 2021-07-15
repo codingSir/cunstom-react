@@ -1,0 +1,147 @@
+.dragging {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: move;
+    // z-index: 100;
+
+    .border-line {
+        position: absolute;
+    }
+
+    .top-border {
+        @extend .border-line;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(
+            to right,
+            #6cbaff 0%,
+            #6cbaff 50%,
+            transparent 50%
+        );
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
+    }
+
+    .right-border {
+        @extend .border-line;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-image: linear-gradient(
+            180deg,
+            #6cbaff 0%,
+            #6cbaff 50%,
+            transparent 50%
+        );
+        background-size: 1px 10px;
+        background-repeat: repeat-y;
+    }
+
+    .bottom-border {
+        @extend .border-line;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-image: linear-gradient(
+            to right,
+            #6cbaff 0%,
+            #6cbaff 50%,
+            transparent 50%
+        );
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
+    }
+
+    .left-border {
+        @extend .border-line;
+        left: 0;
+        height: 100%;
+        width: 1px;
+        background-image: linear-gradient(
+            180deg,
+            #6cbaff 0%,
+            #6cbaff 50%,
+            transparent 50%
+        );
+        background-size: 1px 10px;
+        background-repeat: repeat-y;
+    }
+
+    .dragging_over {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #ecf8fd;
+        position: relative;
+
+        .top-border {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background-image: linear-gradient(
+                to right,
+                #ff6c6c 0%,
+                #ff6c6c 50%,
+                #0000 50%
+            );
+            background-size: 10px 1px;
+            background-repeat: repeat-x;
+        }
+
+        .bottom-border {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-image: linear-gradient(
+                to right,
+                #ff6c6c 0%,
+                #ff6c6c 50%,
+                #0000 50%
+            );
+            background-size: 10px 1px;
+            background-repeat: repeat-x;
+        }
+
+        .right-border {
+            position: absolute;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-image: linear-gradient(
+                180deg,
+                #ff6c6c 0%,
+                #ff6c6c 50%,
+                #0000 50%
+            );
+            background-size: 10px 1px;
+            background-repeat: repeat-x;
+        }
+
+        .left-border {
+            position: absolute;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-image: linear-gradient(
+                180deg,
+                #ff6c6c 0%,
+                #ff6c6c 50%,
+                #0000 50%
+            );
+            background-size: 10px 1px;
+            background-repeat: repeat-x;
+        }
+
+        .dragging_title {
+            color: #43bbef;
+            font-size: 14px;
+        }
+    }
+}
