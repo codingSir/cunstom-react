@@ -1,10 +1,12 @@
 import React from "react";
 import { Button } from 'antd'
 
-export default function ButtonView (){
-    return (
-       <Button>
-           123
-       </Button>
-    )
+export default class ButtonView extends React.Component<any>{
+    render (){
+        return (
+            <Button>
+                123
+            </Button>
+        )
+    }
 }

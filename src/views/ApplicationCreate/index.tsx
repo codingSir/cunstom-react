@@ -11,7 +11,9 @@ interface RouterProps extends RouteComponentProps<any> {}
 
 const gridStyle: React.CSSProperties = {
     width: '20%',
-    height: '200px',
+    minWidth:'200px',
+    height: '20vh',
+    minHeight:'200px',
     textAlign: 'center',
     border:"none",
     margin: '10px 2.5%',
@@ -42,7 +44,7 @@ export default function ApplicationCreate(props:Props){
     const [isModalVisible, setIsModalVisible] = useState(false);
 
     return (
-        <div>
+        <div className={styles.application_create_content}>
             <Card  className={styles.card_wrap} bordered={false} bodyStyle={{background:'none'}}>
                 <Card.Grid style={gridStyle} className={styles.card_item_1}>
                     <div className={styles.create_wrap}>

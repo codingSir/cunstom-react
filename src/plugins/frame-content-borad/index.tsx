@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from "react";
+import React, {useCallback, useEffect, useLayoutEffect, useRef, useState} from "react";
 import ReactDOM from "react-dom";
 import Frame from '@src/components/react-frame-component'
 import FrameContext from '@src/components/FrameContext';
@@ -7,29 +7,32 @@ import MainPanelRender from "@src/plugins/main-panel-render";
 import {DndProvider,useDragDropManager } from "react-dnd";
 import {HTML5Backend} from "react-dnd-html5-backend";
 import _ from 'lodash'
+import {worker} from "cluster";
 
 
 export default function FrameContent (){
     const dragDropManager = useDragDropManager();
     const ref = useRef();
-    let [isInit,setInit] = useState(true)
+
     let iframes:any;
     let manager:any;
-    useEffect(() => {
+
+    useLayoutEffect(() => {
 
         return () =>{
             manager
                 .getBackend()
                 .removeEventListeners(iframes.contentWindow);
         }
-    });
+    },[iframes]);
     const iframeInit = (dragDropManager) => {
-        console.log(ref);
         iframes = ReactDOM.findDOMNode(ref.current);
         dragDropManager.getBackend().addEventListeners(iframes.contentWindow);
 
-
         manager = dragDropManager;
+
+        const heads = window.document.head.cloneNode(true)
+        iframes.contentWindow.document.head.appendChild(heads)
     };
 
     const iframeDidUpdate = dragDropManager => {
@@ -44,7 +47,7 @@ export default function FrameContent (){
             contentDidMount={() => iframeInit(dragDropManager)}
             ref={ref}
             contentDidUpdate={iframeDidUpdate}
-            style={{position:'relative', width:'1200px', height:'800px'}}
+            style={{position:'relative', width:'1200px', height:'800px', background:'white'}}
         >
             <MainPanelRender/>
         </Frame>

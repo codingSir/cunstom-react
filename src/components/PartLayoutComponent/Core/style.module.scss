@@ -1,0 +1,14 @@
+.colLayout {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    padding: 0;
+    overflow: auto;
+    .colLayout-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}

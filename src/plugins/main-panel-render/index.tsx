@@ -5,6 +5,10 @@ import withScrolling, {
     createVerticalStrength
 } from "../../components/react-dnd-scrollzone";
 
+import MainBoardRender from '@src/plugins/main-editor-board-render'
+import {RootDispatch} from "@src/store";
+import {useDispatch} from "react-redux";
+
 const ScrollingComponent = withScrolling("div");
 const linearVerticalStrength = createVerticalStrength(60);
 
@@ -28,15 +32,18 @@ function vStrength(box, point) {
 }
 
 const DropSourceTarget: FC = (props: any) => {
-    const dragDropManager = useDragDropManager()
+    const dragDropManager = useDragDropManager();
+    const dispatch: RootDispatch = useDispatch();
     console.log(props);
-    const [ids,setids] = useState([]);
+
     const [{canDrop, isOver}, drop] = useDrop(() => ({
         accept: accept(),
         hover:(item) => {
-            console.log('hover')
         },
-        drop: (item:any) => (setids([...ids,item.id])),
+        drop: (item:any) => {
+            console.log(item)
+            dispatch.windowNodesTree.setWindowNodesTree(item)
+        },
         collect: (monitor) => ({
             isOver: monitor.isOver(),
             canDrop: monitor.canDrop(),
@@ -45,6 +52,7 @@ const DropSourceTarget: FC = (props: any) => {
 
     const isActive = canDrop && isOver
     console.log(isActive)
+
     return (
         <ScrollingComponent
             className="artboard-scroll"
@@ -56,9 +64,8 @@ const DropSourceTarget: FC = (props: any) => {
                 position: "relative"
             }}
         >
-            <div ref={drop}>
-                {isActive ? 'Release to drop' : 'Drag a box here'}
-
+            <div ref={drop} style={{height:'100%',width:'100%'}}>
+                <MainBoardRender/>
             </div>
         </ScrollingComponent>
     )

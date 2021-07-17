@@ -1,17 +1,16 @@
-import React, { Component } from "react";
-import { FrameContextConsumer } from "../../components/react-frame-component";
-import { connect } from "react-redux";
-import { inject, observer } from "mobx-react";
+import React from "react";
+import { FrameContextConsumer } from "@components/react-frame-component";
 import _ from "lodash";
+import {connect} from "react-redux";
 
-@inject((allStores, nextProps) => ({
-    getPreBaseLayoutByKey:
-        allStores.rootStore.applicationStore.getPreBaseLayoutByKey,
-    getPartComponentClassByPartId:
-        allStores.rootStore.applicationStore.getPartComponentClassByPartId
-}))
-@observer
-class NodeRender extends Component {
+interface Props {
+    nodeId:string,
+    order:Number,
+    nodeChildIds:any [],
+    parentId:string
+    layoutComponent: any
+}
+class NodeRender extends React.Component<Props> {
     renderChild = (childId, index) => {
         const { nodeId } = this.props;
         return (
@@ -27,37 +26,28 @@ class NodeRender extends Component {
     render() {
         const {
             nodeId,
-            parentId,
-            partId,
             order,
+            parentId,
             nodeChildIds,
-            layoutType,
-            layoutMark,
-            getPreBaseLayoutByKey,
-            getPartComponentClassByPartId
+            layoutComponent,
         } = this.props;
 
-        if (layoutType === "isError" || layoutMark === "isError") {
-            return null;
-        }
-        console.log('---layoutMark', layoutMark, partId)
-        const BasicLayoutComponent = _.isNull(partId)
-            ? getPreBaseLayoutByKey(layoutMark).layoutComponent
-            : getPartComponentClassByPartId(partId).layoutComponent;
+        console.log( layoutComponent)
+        // const BasicLayoutComponent =
+        const LayoutComponent =  layoutComponent.component
 
         return (
             <FrameContextConsumer>
                 {({ document, window }) => (
-                    <BasicLayoutComponent
+                    <LayoutComponent
                         nodeId={nodeId}
-                        layoutType={layoutType}
                         order={order}
                         parentId={parentId}
                         isSimulationWindow={true}
                         getContainer={document}
                     >
                         {nodeChildIds.map(this.renderChild)}
-                    </BasicLayoutComponent>
+                    </LayoutComponent>
                 )}
             </FrameContextConsumer>
         );
@@ -69,9 +59,10 @@ const mapState = (state, props) => {
 
     return {
         nodeChildIds: _.isUndefined(nodeData) ? [] : nodeData.childIds,
-        partId: _.isUndefined(nodeData) ? null : nodeData.partId,
+        partId: _.isUndefined(nodeData) ? null : nodeData.id,
         layoutType: _.isUndefined(nodeData) ? "isError" : nodeData.layoutType,
-        layoutMark: _.isUndefined(nodeData) ? "isError" : nodeData.layoutMark
+        layoutMark: _.isUndefined(nodeData) ? "isError" : nodeData.layoutMark,
+        layoutComponent: nodeData,
     };
 };
 
@@ -92,9 +83,6 @@ const mapDispatch = dispatch => {
     };
 };
 
-const VirtualNodeRender = connect(
-    mapState,
-    mapDispatch
-)(NodeRender);
+const VirtualNodeRender = connect(mapState,mapDispatch)(NodeRender);
 
 export default VirtualNodeRender;
