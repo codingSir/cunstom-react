@@ -1,4 +1,4 @@
-import React, {FC, useState} from "react";
+import React, {FC, useState} from "react"
 import {useDragDropManager, useDrop, DropTarget} from 'react-dnd'
 import DragType from "@src/BasisClass/dragType";
 import withScrolling, {
@@ -7,7 +7,7 @@ import withScrolling, {
 
 const ScrollingComponent = withScrolling("div");
 const linearVerticalStrength = createVerticalStrength(60);
-import component from '@src/frameComponent'
+
 
 const accept = () => {
     return [DragType.SystemComponent]
