@@ -1,15 +1,24 @@
 # The FROM instruction sets the Base Image for subsequent instructions.
 # Using Nginx as Base Image
-FROM nginx:1.9
-MAINTAINER Golfen Guo <golfen.guo@daocloud.io>
+FROM node:1.9
+MAINTAINER zhangmeng
 
 # The RUN instruction will execute any commands
 # Adding HelloWorld page into Nginx server
-RUN echo "Hello World DaoCloud!" > /usr/share/nginx/html/index.html
+RUN echo "Hello World DaoCloud!"
+
+WORKDIR /app
+COPY . /app
+
+RUN  npm config set registry registry.npm.taobao.org \
+     && npm install \
+     && npm run build \
+     && cp -r dist/* /Users/zhangmeng/all/docker \
+     && rm -rf /app
 
 # The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime
 EXPOSE 80
 
 # The CMD instruction provides default execution command for an container
 # Start Nginx and keep it from running background
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
