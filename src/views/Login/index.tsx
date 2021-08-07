@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {Layout, Button ,Tabs} from 'antd'
+import CanvasDraw from './CanvasDraw'
 // import api from '@src/services/api'
 import {Input} from '@src/components'
 
@@ -106,9 +107,11 @@ export default function Login(props: Props) {
     return (
         <BlankLayout>
             <Content style={{display:'flex'}}>
-                <div style={{flex:1}}>bg</div>
+                <div style={{flex:1}}>
+                    <CanvasDraw></CanvasDraw>
+                </div>
                 <div className={styles.content}>
-                    <span className={styles.header_text}>中科美络前端工具化平台</span>
+                    <span className={styles.header_text}>前端工具化平台</span>
                     <div style={{width:'256px',marginTop: '38%'}}>
                         <Tabs defaultActiveKey="1" >
                             <TabPane tab="密码登陆" key="1">

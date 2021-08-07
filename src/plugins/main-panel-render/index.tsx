@@ -38,11 +38,20 @@ const DropSourceTarget: FC = (props: any) => {
 
     const [{canDrop, isOver}, drop] = useDrop(() => ({
         accept: accept(),
-        hover:(item) => {
+        hover:(item:any,monitor) => {
+            if(monitor.canDrop() && !item.indicatorInit){
+                var part:any = dispatch.windowNodesTree.setWindowNodesTree(item)
+                part.then(res => {
+                    console.log(res)
+                })
+                item.indicatorInit = true;
+            }
         },
         drop: (item:any) => {
-            console.log(item)
-            dispatch.windowNodesTree.setWindowNodesTree(item)
+            return{
+                allowedDropEffect:'copy',
+                copy:true
+            }
         },
         collect: (monitor) => ({
             isOver: monitor.isOver(),

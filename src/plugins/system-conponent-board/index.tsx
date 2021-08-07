@@ -21,7 +21,10 @@ export interface DragProps {
 const DragSourceTarget: FC<DragProps> = React.memo(({layoutType, type, nodeId, isDropped, children}) => {
     const [{opacity}, drag] = useDrag(
         () => ({
-            item: {layoutType, type},
+            item: {layoutType, type, indicatorInit:false,id: null},
+            options:{
+                dropEffect:'copy'
+            },
             collect: (monitor) => ({
                 opacity: monitor.isDragging() ? 0.4 : 1,
             }),

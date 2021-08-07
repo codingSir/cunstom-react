@@ -10,7 +10,7 @@ import DragType from "@src/BasisClass/dragType";
 import dndSortJudge from "@utils/dndSort";
 
 const DragSourceTarget: FC<any> = React.memo((props) => {
-    const { nodeId, setCurrentSelected, currentSelected, order } = props
+    const { nodeId, setCurrentSelected, currentSelected, order } = props;
 
     const [isHover, setIsHover] = useState(false);
     const [isSelected, setIsSelected] = useState(false);
@@ -18,7 +18,7 @@ const DragSourceTarget: FC<any> = React.memo((props) => {
     const ref = useRef(null)
     const [{opacity, isDragging}, connectDrag] = useDrag(
         () => ({
-            item: { type:DragType.SystemComponent, draggedId: nodeId,order },
+            item: { type:DragType.SystemComponent, draggedId: nodeId, order },
             collect: (monitor) => ({
                 opacity: monitor.isDragging() ? 0.4 : 1,
                 isDragging: monitor.isDragging(),
@@ -29,14 +29,19 @@ const DragSourceTarget: FC<any> = React.memo((props) => {
 
     const [, connectDrop] = useDrop({
         accept: [DragType.SystemComponent],
-        hover(drag,monitor) {
-            console.log(drag)
-            console.log(nodeId)
+        hover(drag:any, monitor) {
+            console.log(drag,order);
+            if(drag.id === nodeId){
+
+            }
+            if(dndSortJudge(drag,ref,drag.order,order,false) && drag.indicatorInit){
+
+            }
             return {
                isOver: monitor.isOver({ shallow: true })
             }
         },
-    })
+    });
 
     useEffect(() =>{
         setIsSelected(nodeId === currentSelected);
@@ -64,7 +69,7 @@ const DragSourceTarget: FC<any> = React.memo((props) => {
                  onMouseLeave={mouseLeave}
                  className={styles.colLayout}
                 >
-                <Dragging {...props} isHover={isHover} isDragging={isDragging} isSelected={isSelected}></Dragging>
+                <Dragging {...props} isHover={isHover} isDragging={isDragging} isSelected={isSelected}/>
                 <LayoutHover {...props} isHover={isHover} isSelected={isSelected}/>
                 <LayoutSelected {...props} isHover={isHover} isSelected={isSelected}/>
                 <Core {...props}/>
