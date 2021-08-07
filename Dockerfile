@@ -1,7 +1,7 @@
 # The FROM instruction sets the Base Image for subsequent instructions.
 # Using Nginx as Base Image
-FROM node:1.9
-MAINTAINER zhangmeng
+FROM node:12.16.1-slim
+MAINTAINER Golfen Guo <zhangmeng>
 
 # The RUN instruction will execute any commands
 # Adding HelloWorld page into Nginx server
