@@ -10,8 +10,7 @@ RUN echo "Hello World DaoCloud!"
 WORKDIR /app
 COPY . /app
 
-RUN  npm config set registry registry.npm.taobao.org \
-     && npm install \
+RUN  npm install \
      && npm run build \
      && cp -r dist/* /Users/zhangmeng/all/docker \
      && rm -rf /app
